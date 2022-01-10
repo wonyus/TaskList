@@ -3,4 +3,4 @@ jittiwat.txt
 kornhumyai.txt
 halooo.txt
 danusorn.txt
-wonyus
+wonyus.txt
