@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-style: italic font-bold text-4xl text-gray-800 leading-tight">
+        <h2 class="bg-clip-text text-transparent bg-gradient-to-r from-pink-300 to-violet-700 font-style: italic font-bold text-5xl text-[#0c1a35] text-gray-800 leading-tight">
             {{ __('ADD TASK :) ') }}
         </h2>
     </x-slot>
