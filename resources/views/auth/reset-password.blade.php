@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <img src="https://cdn.discordapp.com/attachments/930003083763806248/931821635332366396/Untitled-1.png" alt="logo" width="150" height="150">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
