@@ -4,8 +4,8 @@
             {{ __('Dashboard :) ') }}
         </h2>
     </x-slot>
-
-    <div class="grid grid-cols-10 gap-5">
+<head>
+    <!-- <div class="grid grid-cols-10 gap-5">
         <div class="bg-sky-50 aspect-square"></div>
         <div class="bg-sky-100 aspect-square"></div>
         <div class="bg-sky-200 aspect-square"></div>
@@ -16,41 +16,102 @@
         <div class="bg-sky-700 aspect-square"></div>
         <div class="bg-sky-800 aspect-square"></div>
         <div class="bg-sky-900 aspect-square"></div>
-    </div>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-clip-border p-6 bg-sky-400 border-4 border-sky-600 border-dashed overflow-hidden shadow-xl sm:rounded-lg p-5">
-                <div class="flex">
-                    <div class="flex-auto text-2xl mb-4 font-style: italic font-bold ">TASK LIST</div>
-
-                    <div class="flex-auto text-right mt-2">
-                        <a href="/task" class="bg-blue-500 hover:bg-blue-700 text-white font-style: italic font-bold py-2 px-4 rounded">Add new Task</a>
+    </div> -->
+    <style>
+            body {
+                font-family: 'Nunito';
+            }
+            text-align:center;
+            width:100%;
+            margin:0 auto;
+            padding:0px;
+            font-family:helvetica;
+            }
+            #video_wrapper
+            {
+            margin:0px;
+            padding:0px;
+            }
+            #myVideo {
+            position: none;
+            right: 0;
+            bottom: 0;
+            min-width: 50%; 
+            min-height: 50%;
+            font-size:40px;
+            
+            }
+            .Bg{
+                padding: 10px;
+                width: 150px;
+                position: fixed ;
+                bottom: 10%;
+                left: 27.5%;
+                width :45%;
+            }
+            img{
+                border-radius: 50%;
+                margin-left: 20px;
+                width:50px;
+                height:50px;
+            }
+            .h1{
+                font-family: Fantasy;
+                font-size: 50px;
+                color: #4682B4;
+            }
+            .task{
+                font-family: Fantasy;
+                font-size: 23px; 
+                color: #FFFACD; 
+            }
+            .line{
+                display: flex;
+            }
+        </style>
+       </head> 
+    <body class="antialiased">
+    <video autoplay muted loop id="myVideo">
+        <source src="beach.mp4" type="video/mp4">
+        </video>
+        <div class="Bg">
+            <div class="py-12">
+                <div class="sm:rounded-lg p-5">
+                    <div class="flex">
+                        <div class="h1">TASK LIST</div>
+                        
+                        <div class="flex-auto text-right mt-2">
+                            <a href="/task" class="bg-blue-500 hover:bg-blue-700 text-white font-style: italic font-bold py-2 px-4 rounded">Add new Task</a>
+                        </div>
                     </div>
-                </div>
-                <table class="w-full text-md rounded mb-4">
-                    <thead>
-                        <tr class="border-b">
-                            <th class="text-left p-3 px-5 font-style: italic">Task</th>
-                            <th class="text-left p-3 px-5 font-style: italic">Actions</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach(auth()->user()->tasks as $task)
-                        <tr class="border-b hover:bg-orange-100 font-style: italic ">
-                            <td class="p-3 px-5">
-                                {{$task->description}}
-                            </td>
-                            <td class="p-3 px-5">
-
-                                <a href="/task/{{$task->id}}" name="edit" class="font-style: italic font-bold mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</a>
-                                <form action="/task/{{$task->id}}" class="inline-block">
-                                    <button type="submit" name="delete" formmethod="POST" class="font-style: italic font-bold text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
-                                    {{ csrf_field() }}
-                                </form>
-                            </td>
-                        </tr>
+                    <table class="w-full text-md rounded mb-4">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="text-left p-3 px-5 font-style: italic">Task</th>
+                                <th class="text-left p-3 px-5 font-style: italic">Actions</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(auth()->user()->tasks as $task)
+                            <tr class="task">
+                                <td class="p-3 px-5">
+                                    {{$task->description}}
+                                </td>
+                                <td class="logo flex">                                   
+                                    <a href="/task/{{$task->id}}" name="edit" 
+                                    class="logo1">
+                                    <img src="edit.png" alt="accept">
+                                    </a>
+                                    <form action="/task/{{$task->id}}" class="inline-block">
+                                        <button type="submit" name="delete" formmethod="POST" 
+                                        class="delete">
+                                        <img src="delete.png" alt="Bin">
+                                    </button>
+                                        {{ csrf_field() }}
+                                    </form>
+                                </td>
+                            </tr>
 
 
                         @endforeach
@@ -60,4 +121,6 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+        </div>
+    </x-app-layout>
+</body>

@@ -20,74 +20,47 @@
             padding:0px;
             }
             #myVideo {
-            position: fixed;
+            position: none;
             right: 0;
             bottom: 0;
-            min-width: 100%; 
-            min-height: 100%;
+            min-width: 50%; 
+            min-height: 50%;
+            font-size:40px;
+            
             }
-            .LOGO{
-            margin:0px;
-            padding:0px;
-            right: 0;
-            bottom: 0;
-            min-width: 10%; 
-            min-height: 10%;
-            }
-            #myLogo {
-            margin:0px;
-            padding:0px;
-            right: 0;
-            bottom: 0;
-            width: 10%; 
-            height: 10%;
-            }
-            .button{ 
-                border: none;
-                color: white;
-                padding: 15px 32px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                position: fixed ;
-                top: 50%;
-                bottom: 30;
-                left: 27%;
-                width :45%;
-
-            }
-            .login{
-                width: 20%; 
-                height: 20%;
-                font-size: 50px;
-
-            }
-            .regis{
-                margin-left:5%;
-                width: 20%; 
-                height: 20%;
-                font-size:50px;
-            }
-            .login:hover, .regis:hover{
-                background-color: #7FFFD4;
-                border: 2px solid #00FFFF ;
-                border-radius: 25px;
-            }
-            .image{
-                padding: 5px;
+            .Bg{
+                padding: 50px;
                 width: 150px;
                 position: fixed ;
-                bottom: 60%;
-                left: 41.5%;
+                bottom: 40%;
+                left: 26%;
                 width :45%;
             }
             img{
-                border-radius: 50%; 
+                border-radius: 50%;
+                margin-left: 20px;
+                width:50px;
+                height:50px;
+            }
+            .h1{
+                font-family: Fantasy;
+                font-size: 50px;
+                color: #4682B4;
+            }
+            .task{
+                font-family: Fantasy;
+                font-size: 23px; 
+                color: #FFFACD; 
+            }
+            .line{
+                display: flex; 
             }
         </style>
-
-    <div class="py-12">
+    <body class="antialiased">
+        <div class="Bg">
+        <video autoplay muted loop id="myVideo">
+        <source src="beach.mp4" type="video/mp4">
+        </video>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-clip-border p-6 bg-sky-400 border-4 border-sky-600 border-dashed overflow-hidden shadow-xl sm:rounded-lg p-5">
                 
@@ -111,5 +84,5 @@
         </div>
     </div>
 
-
+        </body>
 </x-app-layout>
