@@ -53,15 +53,20 @@
             .h1{
                 font-family: Fantasy;
                 font-size: 50px;
-                color: #4682B4;
+                color: #2F4F4F;
             }
             .task{
                 font-family: Fantasy;
                 font-size: 23px; 
-                color: #FFFACD; 
+                color: #FFD700; 
             }
             .line{
                 display: flex;
+            }
+            .border-b{
+                font-size: 23px;
+                font-family: Cursive;
+                color: #FFA07A;
             }
         </style>
        </head> 
@@ -82,8 +87,8 @@
                     <table class="w-full text-md rounded mb-4">
                         <thead>
                             <tr class="border-b">
-                                <th class="text-left p-3 px-5 font-style: italic">Task</th>
-                                <th class="text-left p-3 px-5 font-style: italic">Actions</th>
+                                <th class="text-left p-3 px-5 font-bold font-style: italic">Task</th>
+                                <th class="text-left p-3 px-7 font-style: italic">Actions</th>
                                 <th></th>
                             </tr>
                         </thead>
