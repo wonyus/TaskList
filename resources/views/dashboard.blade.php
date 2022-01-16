@@ -99,10 +99,7 @@
                                     {{$task->description}}
                                 </td>
                                 <td class="logo flex">                                   
-                                    <a href="/task/{{$task->id}}" name="edit" 
-                                    class="logo1">
-                                    <img src="edit.png" alt="accept">
-                                    </a>
+                                    <a href="/task/{{$task->id}}" name="edit" class="logo1"><img src="edit.png" alt="accept"></a>
                                     <form action="/task/{{$task->id}}" class="inline-block">
                                         <button type="submit" name="delete" formmethod="POST" 
                                         class="delete">
