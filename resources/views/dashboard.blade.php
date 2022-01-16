@@ -21,12 +21,7 @@
             body {
                 font-family: 'Nunito';
             }
-            text-align:center;
-            width:100%;
-            margin:0 auto;
-            padding:0px;
-            font-family:helvetica;
-            }
+            
             #video_wrapper
             {
             margin:0px;

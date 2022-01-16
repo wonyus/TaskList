@@ -8,12 +8,7 @@
             body {
                 font-family: 'Nunito';
             }
-            text-align:center;
-            width:100%;
-            margin:0 auto;
-            padding:0px;
-            font-family:helvetica;
-            }
+            
             #video_wrapper
             {
             margin:0px;
@@ -63,7 +58,7 @@
         <div class="Bg">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-            <div class="bg-clip-border p-6 bg-sky-400 border-4 border-sky-600 border-dashed overflow-hidden shadow-xl sm:rounded-lg p-5">
+            <div class="bg-clip-border p-6 bg-[#f9faec] border-4 border-sky-600 border-dashed overflow-hidden shadow-xl sm:rounded-lg p-5">
            
                 <form method="POST" action="/task">
                     
