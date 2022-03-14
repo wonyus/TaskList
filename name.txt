@@ -1,6 +1,4 @@
-imron.txt
-jittiwat.txt
-kornhumyai.txt
-halooo.txt
-danusorn.txt
-wonyus.txt
+imron
+jittiwat
+danusorn
+wonyus
